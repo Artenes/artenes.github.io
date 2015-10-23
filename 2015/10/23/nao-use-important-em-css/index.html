@@ -3,17 +3,22 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Tag: android | Artenes Nogueira</title>
+  <title>Não use !important em CSS | Artenes Nogueira</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Este é mais do que meu website pessoal. É minha base de conhecimento. Problemas que enfrentei e soluções que encontrei, é aqui onde deixo tudo registrado.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Artenes Nogueira">
-<meta property="og:url" content="http://artenes.github.io/tags/android/index.html">
+  <meta name="description" content="O post no blog do Zeno sobre o uso de !important em CSS me chamou a atenção para algo que não sabia: usar !important é má prática e deveria me sentir mal com isso.
+Não sou o cara do front-end, logo nã">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Não use !important em CSS">
+<meta property="og:url" content="http://artenes.github.io/2015/10/23/nao-use-important-em-css/index.html">
 <meta property="og:site_name" content="Artenes Nogueira">
-<meta property="og:description" content="Este é mais do que meu website pessoal. É minha base de conhecimento. Problemas que enfrentei e soluções que encontrei, é aqui onde deixo tudo registrado.">
+<meta property="og:description" content="O post no blog do Zeno sobre o uso de !important em CSS me chamou a atenção para algo que não sabia: usar !important é má prática e deveria me sentir mal com isso.
+Não sou o cara do front-end, logo nã">
+<meta property="og:image" content="http://artenes.github.io/zeno.png">
+<meta property="og:updated_time" content="2015-10-23T22:34:37.285Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Artenes Nogueira">
-<meta name="twitter:description" content="Este é mais do que meu website pessoal. É minha base de conhecimento. Problemas que enfrentei e soluções que encontrei, é aqui onde deixo tudo registrado.">
+<meta name="twitter:title" content="Não use !important em CSS">
+<meta name="twitter:description" content="O post no blog do Zeno sobre o uso de !important em CSS me chamou a atenção para algo que não sabia: usar !important é má prática e deveria me sentir mal com isso.
+Não sou o cara do front-end, logo nã">
   
   
     <link rel="icon" href="favicon.ico">
@@ -85,61 +90,52 @@
           <section id="main">
             <div class="main-body-header">
 
-              <h1 class="header"><i class="icon fa fa-tag"></i>tag : <em>android</em></h1>
+              <h1 class="header"><a class="page-title-link" href="/categories/solucao/">solução</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/solucao/css/">css</a></h1>
             </div>
             <div class="main-body-content">
               
-  
-  
-    
-    
+  <article id="post-nao-use-important-em-css" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+      <!--  -->
       
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2015" class="archive-year"><i class="icon fa fa-calendar-o"></i>2015</a>
-        </div>
-        <div class="archives">
-    
-    
-    
-      <div class="article-row">
-    
-        
-  <article class="article article-summary">
-    <div class="article-summary-inner">
-      
-<a href="/2015/10/21/hansys/" class="thumbnail">
+        <header class="article-header">
+          
   
-    <span style="background-image:url(/2015/10/21/hansys/hansys.png
-)" alt="Aplicativo para pacientes com Hanseníase" class="thumbnail-image"></span>
+    <h1 class="article-title" itemprop="name">
+      Não use !important em CSS
+    </h1>
   
-</a>
 
-      <div class="article-meta">
-        <p class="category"><a class="article-category-link" href="/categories/projeto/">projeto</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/projeto/mobile/">mobile</a></p>
-        <p class="date"><time datetime="2015-10-21T21:05:37.000Z" itemprop="datePublished">21-10-2015</time></p>
-      </div>
-      <h2 class="article-title">
-        <a href="/2015/10/21/hansys/" class="title">Aplicativo para pacientes com Hanseníase</a>
-      </h2>
-      <p class="article-excerpt">
-        
-        
-Esta é uma aplicação mobile feita para Android. Foi usado Java como linguagem de programação e SQLite como banco de dados. Ele permite coletar e gerenciar os dados de pacientes com hanseníase. Ele fo
+        </header>
+      
+      <p class="article-byline">
+        <a href="/2015/10/23/nao-use-important-em-css/" class="article-date">
+  <time datetime="2015-10-23T22:13:06.000Z" itemprop="datePublished">23-10-2015</time>
+</a>
       </p>
+      <div class="article-entry" itemprop="articleBody">
+        <p><img src="zeno.png" alt="Postagem sobre !important em CSS no blog do Zeno"></p>
+<p>O post no blog do Zeno sobre o <a href="http://zenorocha.com/css-important" target="_blank" rel="external">uso de !important em CSS</a> me chamou a atenção para algo que não sabia: usar <code>!important</code> é má prática e deveria me sentir mal com isso.</p>
+<p>Não sou o cara do front-end, logo não estou tão familizarizado com CSS, mas de vez em quando tenho que mexer nele quando estou trabalhando sozinho em um projeto. </p>
+<p>Enfrentei um problema em wordpress envolvendo CSS. Queria sobrescrever o estilo de um elemento no tema pai a partir do tema filho. Mas não estava conseguindo pois meu CSS estava sendo lido antes do CSS do tema pai. </p>
+<p>No CSS tudo é uma questão de precedência. E você pode conseguir fazer seu CSS ter uma precedência maior se você for mais especifico. Por exemplo, precisava sobrescrever o <code>padding</code> neste CSS:</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="class">.member</span> <span class="rules">&#123;</span><br><span class="line">	<span class="rule"><span class="attribute">padding</span>:<span class="value"> <span class="number">25px</span></span></span>;</span><br><span class="line">&#125;</span></span><br></pre></td></tr></table></figure>
+<p>Então como não era suficiente repetir o mesmo código e alterar o valor do <code>padding</code> no tema filho, tratei de ser mais especifico que o CSS do tema pai:</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">div</span><span class="class">.member</span><span class="rules">&#123;</span><br><span class="line">	<span class="rule"><span class="attribute">padding</span>:<span class="value"> <span class="number">30px</span></span></span>;</span><br><span class="line">&#125;</span></span><br></pre></td></tr></table></figure>
+<p>Estou dizendo que toda <code>div</code> que fazer uso da classe <code>member</code> deve ter um <code>padding</code> de 30px. E como essa regra é mais especifica que a regra do tema pai, ela prevalece.</p>
+
+      </div>
+      <footer class="article-footer">
+        <a data-url="http://artenes.github.io/2015/10/23/nao-use-important-em-css/" data-id="cig48gtir00029kqoe3jn4gfu" class="article-share-link"><i class="fa fa-share"></i>Compartilhar</a>
+        
+        
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/">css</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/important/">important</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/wordpress/">wordpress</a></li></ul>
+
+      </footer>
     </div>
   </article>
-
-    
-      </div>
-    
   
   
-    </div></section>
-  
-  
-
 
             </div>
           </section>
@@ -155,6 +151,19 @@ Esta é uma aplicação mobile feita para Android. Foi usado Java como linguagem
       
     </ul>
   </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2015/10/21/hexo-asset-folder/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">antigos</strong>
+      <p class="article-nav-title">Problema com caminho relativo para imagens e arquivo em posts do Hexo</p>
+      <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+    </a>
+  
+</nav>
+
   
   <div class="widgets-container">
     
