@@ -1,0 +1,4 @@
+1. Definir mapa do site
+2. Buscar keywords para cada página do site
+3. Enxugar a lista de keywords de cada página para até no máximo 3 keywords
+4. Atualizar mapa do site com as keywords selecionadas
