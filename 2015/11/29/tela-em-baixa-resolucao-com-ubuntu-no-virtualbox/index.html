@@ -3,17 +3,19 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Category: mobile | Artenes Nogueira</title>
+  <title>Tela em baixa resolução com Ubuntu no Virtual Box | Artenes Nogueira</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Este é mais do que meu website pessoal. É minha base de conhecimento. Problemas que enfrentei e soluções que encontrei, é aqui onde deixo tudo registrado.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Artenes Nogueira">
-<meta property="og:url" content="http://artenes.github.io/categories/projeto/mobile/index.html">
+  <meta name="description" content="Instalei o Ubunto no VirtualBox que rodo em minha máquina com Windows 7. Enfrentei o problema de que a tela da máquina virtual estava fica em uma resolução de 800x600. Para fazer com que a tela ficass">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Tela em baixa resolução com Ubuntu no Virtual Box">
+<meta property="og:url" content="http://artenes.github.io/2015/11/29/tela-em-baixa-resolucao-com-ubuntu-no-virtualbox/index.html">
 <meta property="og:site_name" content="Artenes Nogueira">
-<meta property="og:description" content="Este é mais do que meu website pessoal. É minha base de conhecimento. Problemas que enfrentei e soluções que encontrei, é aqui onde deixo tudo registrado.">
+<meta property="og:description" content="Instalei o Ubunto no VirtualBox que rodo em minha máquina com Windows 7. Enfrentei o problema de que a tela da máquina virtual estava fica em uma resolução de 800x600. Para fazer com que a tela ficass">
+<meta property="og:image" content="http://artenes.github.io/tela-reduzida.jpg">
+<meta property="og:updated_time" content="2015-11-29T04:18:42.181Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Artenes Nogueira">
-<meta name="twitter:description" content="Este é mais do que meu website pessoal. É minha base de conhecimento. Problemas que enfrentei e soluções que encontrei, é aqui onde deixo tudo registrado.">
+<meta name="twitter:title" content="Tela em baixa resolução com Ubuntu no Virtual Box">
+<meta name="twitter:description" content="Instalei o Ubunto no VirtualBox que rodo em minha máquina com Windows 7. Enfrentei o problema de que a tela da máquina virtual estava fica em uma resolução de 800x600. Para fazer com que a tela ficass">
   
   
     <link rel="icon" href="favicon.ico">
@@ -85,62 +87,51 @@
           <section id="main">
             <div class="main-body-header">
 
-              <h1 class="header"><i class="icon fa fa-folder-open"></i>categoria : <em class="page-title-link">mobile</em></h1>
+              <h1 class="header"><a class="page-title-link" href="/categories/solucao/">solução</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/solucao/os/">os</a></h1>
             </div>
             <div class="main-body-content">
               
-  
-  
-    
-    
+  <article id="post-tela-em-baixa-resolucao-com-ubuntu-no-virtualbox" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+      <!--  -->
       
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2015" class="archive-year"><i class="icon fa fa-calendar-o"></i>2015</a>
-        </div>
-        <div class="archives">
-    
-    
-    
-      <div class="article-row">
-    
-        
-  <article class="article article-summary">
-    <div class="article-summary-inner">
-      
-<a href="/2015/10/21/hansys/" class="thumbnail">
+        <header class="article-header">
+          
   
-    <span style="background-image:url(/2015/10/21/hansys/hansys.png
-)" alt="Aplicativo para pacientes com Hanseníase" class="thumbnail-image"></span>
+    <h1 class="article-title" itemprop="name">
+      Tela em baixa resolução com Ubuntu no Virtual Box
+    </h1>
   
-</a>
 
-      <div class="article-meta">
-        <p class="category"><a class="article-category-link" href="/categories/projeto/">projeto</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/projeto/mobile/">mobile</a></p>
-        <p class="date"><time datetime="2015-10-21T21:05:37.000Z" itemprop="datePublished">21-10-2015</time></p>
-      </div>
-      <h2 class="article-title">
-        <a href="/2015/10/21/hansys/" class="title">Aplicativo para pacientes com Hanseníase</a>
-      </h2>
-      <p class="article-excerpt">
-        
-        
-Esta é uma aplicação mobile feita para Android. Foi usado Java como linguagem de programação e SQLite como banco de dados. Ele permite coletar e gerenciar os dados de pacientes com hanseníase. Ele fo
+        </header>
+      
+      <p class="article-byline">
+        <a href="/2015/11/29/tela-em-baixa-resolucao-com-ubuntu-no-virtualbox/" class="article-date">
+  <time datetime="2015-11-29T04:02:24.000Z" itemprop="datePublished">29-11-2015</time>
+</a>
       </p>
+      <div class="article-entry" itemprop="articleBody">
+        <p><img src="tela-reduzida.jpg" alt="Problema da tela em baixa resolução"></p>
+<p>Instalei o Ubunto no VirtualBox que rodo em minha máquina com Windows 7. Enfrentei o problema de que a tela da máquina virtual estava fica em uma resolução de 800x600. Para fazer com que a tela ficasse fullscreen, tive que instalar algumas coisas na máquina virtual. No próprio Ubuntu executei os comandos:</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get <span class="operator"><span class="keyword">install</span> virtualbox-guest-dkms</span><br><span class="line">$ sudo apt-<span class="keyword">get</span> <span class="keyword">install</span> virtualbox-guest-x11</span></span><br></pre></td></tr></table></figure>
+<p>Este último comando resultou em um problema de dependência e então tive de executar os comandos abaixo</p>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-<span class="built_in">get</span> <span class="built_in">remove</span> libcheese-gtk23</span><br><span class="line">$ sudo apt-<span class="built_in">get</span> install xserver-xorg-core</span><br><span class="line">$ sudo apt-<span class="built_in">get</span> install virtualbox-guest-x11</span><br></pre></td></tr></table></figure>
+<p>E ao executar os comandos acima acabei desinstalando o unity-control-center, que é responsável pela parte de configurações do sistema. Então tive de reinstalá-lo:</p>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-<span class="built_in">get</span> install unity-control-<span class="keyword">center</span></span><br></pre></td></tr></table></figure>
+<p>Com isso basta reiniciar a máquina virtual e a tela deve ocupar todo o espaço disponível.</p>
+
+      </div>
+      <footer class="article-footer">
+        <a data-url="http://artenes.github.io/2015/11/29/tela-em-baixa-resolucao-com-ubuntu-no-virtualbox/" data-id="cihk0j4c1000dg0qo6l2l968a" class="article-share-link"><i class="fa fa-share"></i>Compartilhar</a>
+        
+        
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ubuntu/">ubuntu</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/virtualbox/">virtualbox</a></li></ul>
+
+      </footer>
     </div>
   </article>
-
-    
-      </div>
-    
   
   
-    </div></section>
-  
-  
-
-
 
             </div>
           </section>
@@ -156,6 +147,19 @@ Esta é uma aplicação mobile feita para Android. Foi usado Java como linguagem
       
     </ul>
   </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2015/11/26/template-responsivo-para-email/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">antigos</strong>
+      <p class="article-nav-title">Template responsivo para e-mail</p>
+      <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+    </a>
+  
+</nav>
+
   
   <div class="widgets-container">
     
