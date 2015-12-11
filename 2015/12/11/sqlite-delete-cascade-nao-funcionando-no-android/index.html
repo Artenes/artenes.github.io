@@ -3,17 +3,19 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Tag: web | Artenes Nogueira</title>
+  <title>SQLite DELETE CASCADE não funcionando no Android | Artenes Nogueira</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Este é mais do que meu website pessoal. É minha base de conhecimento. Problemas que enfrentei e soluções que encontrei, é aqui onde deixo tudo registrado.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Artenes Nogueira">
-<meta property="og:url" content="http://artenes.github.io/tags/web/index.html">
+  <meta name="description" content="O DELETE CASCADE nas minhas tabelas no SQLite não estavam rodando porque esqueci de avisar pro SQLite para ele prestar atenção nas chaves estrangeiras. Você deve dizer pro SQLite que ele deve levar em">
+<meta property="og:type" content="article">
+<meta property="og:title" content="SQLite DELETE CASCADE não funcionando no Android">
+<meta property="og:url" content="http://artenes.github.io/2015/12/11/sqlite-delete-cascade-nao-funcionando-no-android/index.html">
 <meta property="og:site_name" content="Artenes Nogueira">
-<meta property="og:description" content="Este é mais do que meu website pessoal. É minha base de conhecimento. Problemas que enfrentei e soluções que encontrei, é aqui onde deixo tudo registrado.">
+<meta property="og:description" content="O DELETE CASCADE nas minhas tabelas no SQLite não estavam rodando porque esqueci de avisar pro SQLite para ele prestar atenção nas chaves estrangeiras. Você deve dizer pro SQLite que ele deve levar em">
+<meta property="og:image" content="http://artenes.github.io/chave.png">
+<meta property="og:updated_time" content="2015-12-11T17:33:22.031Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Artenes Nogueira">
-<meta name="twitter:description" content="Este é mais do que meu website pessoal. É minha base de conhecimento. Problemas que enfrentei e soluções que encontrei, é aqui onde deixo tudo registrado.">
+<meta name="twitter:title" content="SQLite DELETE CASCADE não funcionando no Android">
+<meta name="twitter:description" content="O DELETE CASCADE nas minhas tabelas no SQLite não estavam rodando porque esqueci de avisar pro SQLite para ele prestar atenção nas chaves estrangeiras. Você deve dizer pro SQLite que ele deve levar em">
   
   
     <link rel="icon" href="favicon.ico">
@@ -85,62 +87,50 @@
           <section id="main">
             <div class="main-body-header">
 
-              <h1 class="header"><i class="icon fa fa-tag"></i>tag : <em>web</em></h1>
+              <h1 class="header"><a class="page-title-link" href="/categories/solucao/">solução</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/solucao/android/">android</a></h1>
             </div>
             <div class="main-body-content">
               
-  
-  
-    
-    
+  <article id="post-sqlite-delete-cascade-nao-funcionando-no-android" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+      <!--  -->
       
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2015" class="archive-year"><i class="icon fa fa-calendar-o"></i>2015</a>
-        </div>
-        <div class="archives">
-    
-    
-    
-      <div class="article-row">
-    
-        
-  <article class="article article-summary">
-    <div class="article-summary-inner">
-      
-<a href="/2015/10/29/o-que-aprendi-no-webmedia-2015/" class="thumbnail">
+        <header class="article-header">
+          
   
-    <span style="background-image:url(/2015/10/29/o-que-aprendi-no-webmedia-2015/webmedia2015.png
-)" alt="O que aprendi no WebMedia 2015" class="thumbnail-image"></span>
+    <h1 class="article-title" itemprop="name">
+      SQLite DELETE CASCADE não funcionando no Android
+    </h1>
   
-</a>
 
-      <div class="article-meta">
-        <p class="category"><a class="article-category-link" href="/categories/academico/">acadêmico</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/academico/evento/">evento</a></p>
-        <p class="date"><time datetime="2015-10-29T23:39:41.000Z" itemprop="datePublished">29-10-2015</time></p>
-      </div>
-      <h2 class="article-title">
-        <a href="/2015/10/29/o-que-aprendi-no-webmedia-2015/" class="title">O que aprendi no WebMedia 2015</a>
-      </h2>
-      <p class="article-excerpt">
-        
-        
-Webmedia 2015 foi um simpósio sobre multimídia e a web que ocorreu em Manaus nos dias 27 à 30 de outubro de 2015.
-Estou usando esta postagem para anotar algumas palavras chaves que achei que podem se
+        </header>
+      
+      <p class="article-byline">
+        <a href="/2015/12/11/sqlite-delete-cascade-nao-funcionando-no-android/" class="article-date">
+  <time datetime="2015-12-11T17:17:46.000Z" itemprop="datePublished">11-12-2015</time>
+</a>
       </p>
+      <div class="article-entry" itemprop="articleBody">
+        <p><img src="chave.png" alt="Uma chave (que pode ser estrangeira)"></p>
+<p>O DELETE CASCADE nas minhas tabelas no SQLite não estavam rodando porque esqueci de avisar pro SQLite para ele prestar atenção nas chaves estrangeiras. Você deve dizer pro SQLite que ele deve levar em conta as chaves estrangeiras ao realizar qualquer operação através do comando:</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="operator"><span class="keyword">PRAGMA</span> foreign_keys = <span class="keyword">ON</span>;</span></span><br></pre></td></tr></table></figure>
+<p>Em Android, isso pode ser resolvido sobrescrevendo o método <code>onOpen()</code> da classe <code>SQLiteOpenHelper</code>, que é a classe comumente usada para abrir e fechar conexões com o banco. Então nesse método <code>onOpen()</code> você executa este método:</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.execSQL("<span class="operator"><span class="keyword">PRAGMA</span> foreign_keys = <span class="keyword">ON</span>;</span>");</span><br></pre></td></tr></table></figure>
+<p>E pronto! Toda vez que você abrir uma conexão, as chaves estrangeiras serão ativas e o SQLite executará os DELETE CASCADE ou qualquer outro CASCADE que tiver em sua tabela.</p>
+<p>Esta discussão contem uma explicação melhor sobre tudo isso: <a href="http://stackoverflow.com/questions/13641250/sqlite-delete-cascade-not-working" target="_blank" rel="external">http://stackoverflow.com/questions/13641250/sqlite-delete-cascade-not-working</a></p>
+
+      </div>
+      <footer class="article-footer">
+        <a data-url="http://artenes.github.io/2015/12/11/sqlite-delete-cascade-nao-funcionando-no-android/" data-id="cii1y7omz0017k0qoyn7h62pl" class="article-share-link"><i class="fa fa-share"></i>Compartilhar</a>
+        
+        
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/android/">android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/delete-cascade/">delete cascade</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/foreign-key/">foreign key</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/sqlite/">sqlite</a></li></ul>
+
+      </footer>
     </div>
   </article>
-
-    
-      </div>
-    
   
   
-    </div></section>
-  
-  
-
 
             </div>
           </section>
@@ -156,6 +146,19 @@ Estou usando esta postagem para anotar algumas palavras chaves que achei que pod
       
     </ul>
   </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2015/12/03/tamanho-de-imagens-para-redes-sociais/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">antigos</strong>
+      <p class="article-nav-title">Tamanho de imagens para Redes Socias</p>
+      <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+    </a>
+  
+</nav>
+
   
   <div class="widgets-container">
     
