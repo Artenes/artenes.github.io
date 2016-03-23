@@ -3,19 +3,18 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Boas práticas de desenvolvimento Android | Artenes Nogueira</title>
+  <title>Como instalar Sysbench em um servidor compartilhado linux da Locaweb | Artenes Nogueira</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Neste post, que posso vir a atualizar futuramente, vou listar alguns artigos interessantes e úteis que achei pela internet sobre boas práticas de desenvolvimento para Android. Espero que isso seja úti">
+  <meta name="description" content="Sysbench é um programa em C que realiza análise de benchmarking para Linux. Ele permite testar a CPU, memória, e I/O de arquivos. Tive de instalar esse aplicativo em um servidor pois estava fazendo um">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Boas práticas de desenvolvimento Android">
-<meta property="og:url" content="http://artenes.github.io/2015/11/26/boas-praticas-desenvolvimento-android/index.html">
+<meta property="og:title" content="Como instalar Sysbench em um servidor compartilhado linux da Locaweb">
+<meta property="og:url" content="http://artenes.github.io/2016/03/23/instalar-sysbench-em-um-servidor-compartilhado-linux/index.html">
 <meta property="og:site_name" content="Artenes Nogueira">
-<meta property="og:description" content="Neste post, que posso vir a atualizar futuramente, vou listar alguns artigos interessantes e úteis que achei pela internet sobre boas práticas de desenvolvimento para Android. Espero que isso seja úti">
-<meta property="og:image" content="http://artenes.github.io/android-icon.png">
-<meta property="og:updated_time" content="2015-11-26T23:05:02.887Z">
+<meta property="og:description" content="Sysbench é um programa em C que realiza análise de benchmarking para Linux. Ele permite testar a CPU, memória, e I/O de arquivos. Tive de instalar esse aplicativo em um servidor pois estava fazendo um">
+<meta property="og:updated_time" content="2016-03-23T19:27:16.277Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Boas práticas de desenvolvimento Android">
-<meta name="twitter:description" content="Neste post, que posso vir a atualizar futuramente, vou listar alguns artigos interessantes e úteis que achei pela internet sobre boas práticas de desenvolvimento para Android. Espero que isso seja úti">
+<meta name="twitter:title" content="Como instalar Sysbench em um servidor compartilhado linux da Locaweb">
+<meta name="twitter:description" content="Sysbench é um programa em C que realiza análise de benchmarking para Linux. Ele permite testar a CPU, memória, e I/O de arquivos. Tive de instalar esse aplicativo em um servidor pois estava fazendo um">
   
   
     <link rel="icon" href="favicon.ico">
@@ -87,11 +86,11 @@
           <section id="main">
             <div class="main-body-header">
 
-              <h1 class="header">sem categoria</h1>
+              <h1 class="header"><a class="page-title-link" href="/categories/solucao/">solução</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/solucao/linux/">linux</a></h1>
             </div>
             <div class="main-body-content">
               
-  <article id="post-boas-praticas-desenvolvimento-android" class="article article-single article-type-post" itemscope itemprop="blogPost">
+  <article id="post-instalar-sysbench-em-um-servidor-compartilhado-linux" class="article article-single article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
       <!--  -->
       
@@ -99,28 +98,47 @@
           
   
     <h1 class="article-title" itemprop="name">
-      Boas práticas de desenvolvimento Android
+      Como instalar Sysbench em um servidor compartilhado linux da Locaweb
     </h1>
   
 
         </header>
       
       <p class="article-byline">
-        <a href="/2015/11/26/boas-praticas-desenvolvimento-android/" class="article-date">
-  <time datetime="2015-11-26T22:11:52.000Z" itemprop="datePublished">26-11-2015</time>
+        <a href="/2016/03/23/instalar-sysbench-em-um-servidor-compartilhado-linux/" class="article-date">
+  <time datetime="2016-03-23T18:14:15.000Z" itemprop="datePublished">23-03-2016</time>
 </a>
       </p>
       <div class="article-entry" itemprop="articleBody">
-        <p><img src="android-icon.png" alt="Android"></p>
-<p>Neste post, que posso vir a atualizar futuramente, vou listar alguns artigos interessantes e úteis que achei pela internet sobre boas práticas de desenvolvimento para Android. Espero que isso seja útil para você de alguma forma.</p>
-<h1 id="Boas_práticas">Boas práticas</h1><p>-<a href="http://fernandocejas.com/2014/09/03/architecting-android-the-clean-way/" target="_blank" rel="external">Arquitetando Android…Do jeito limpo?</a><br>-<a href="http://stackoverflow.com/questions/9868972/android-coding-best-practices-design-patterns" target="_blank" rel="external">Melhores práticas de código/padrões de projetos para Android</a><br>-<a href="https://www.quora.com/What-are-some-best-practices-in-Android-coding-patterns" target="_blank" rel="external">Quais são algumas das melhores práticas nos padrões de código em Android?</a></p>
-<h1 id="Ferramentas">Ferramentas</h1><p>-<a href="http://blog.caelum.com.br/injecao-de-dependencias-no-android-com-roboguice/" target="_blank" rel="external">Injeção de dependências com RoboGuice</a><br>-<a href="http://greendao-orm.com/" target="_blank" rel="external">ORM com greenDAO</a></p>
+        <p>Sysbench é um programa em C que realiza análise de benchmarking para Linux. Ele permite testar a CPU, memória, e I/O de arquivos. Tive de instalar esse aplicativo em um servidor pois estava fazendo um trabalho da faculdade.</p>
+<h1 id="#1_-_Clonar_repositório_do_Github">#1 - Clonar repositório do Github</h1><p>Clone os arquivos do Sysbench do repositório da aplicação em: <a href="https://github.com/akopytov/sysbench" target="_blank" rel="external">https://github.com/akopytov/sysbench</a>.</p>
+<h1 id="#2_-_Execute_o_comando_-/autogen-sh_dentro_do_diretório_clonado">#2 - Execute o comando <code>./autogen.sh</code> dentro do diretório clonado</h1><p>Esse comando vai gerar alguns arquivos que serão usados para compilação depois. Isso mesmo, primeiro temos que compilar o programa pois só temos o código fonte disponível.</p>
+<p>Nesse passo existe uma dificuldade: você não ter alguns programas instalados na máquina que você está tentando instalar o sysbench. No meu caso eu não tinha o <code>libtoolize</code>. Como nos servidores compartilhados da Locaweb não existe uma aplicação para gerência de pacotes, tive que ir atrás do pacote que vinha com o <code>libtoolize</code> na internet. Não encontrei nada, mas aprendi que bastava eu rodar um </p>
+<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-<span class="keyword">get</span> install libtool</span><br></pre></td></tr></table></figure>
+<p>em um ubuntu que eu teria o que eu precisava. Você vai precisar colocar no servidor os seguintes arquivos que você baixou no Ubuntu:</p>
+<figure class="highlight lisp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">/usr/bin/libtoolize <span class="list">(<span class="keyword">este</span> é um arquivo)</span></span><br><span class="line">/usr/share/aclocal  <span class="list">(<span class="keyword">este</span> é um diretório, pegue tudo que tem nele)</span></span><br><span class="line">/usr/share/libtool  <span class="list">(<span class="keyword">este</span> é um diretório, pegue tudo que tem nele)</span></span><br></pre></td></tr></table></figure>
+<p>Para facilitar você pode <a href="libtoolize.rar">baixar aqui</a> esses arquivos do <code>libtoolize</code> caso você já não tenha instalado no servidor.</p>
+<p>Na Locaweb você não pode colocar arquivos na pasta <code>/usr/bin</code>, mas você pode criar uma pasta chamada <code>bin</code> no seu diretório raiz (<code>~</code>) que vai funcionar da mesma forma. Lá você vai colcoar o arquivo <code>libtoolize</code>. Assim você pode executar ele de qualquer outro diretório.</p>
+<p>Os outros diretórios você também deve colocar no seu diretório raiz. Minha sugestão é que você crie uma pasta <code>usr</code> e dentro dela crie outra pasta chamada <code>share</code>. Aqui dentro você vai colocar os diretórios que pegamos anteriormente (o <code>aclocal</code> e o <code>libtool</code>). </p>
+<p>Agora, tratando-se especificamente da Locaweb, precisamos alterar uma parte do <code>libtoolize</code>:</p>
+<figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="constant">prefix</span>=/usr</span><br><span class="line"><span class="constant">datadir</span>=/usr/share</span><br><span class="line"><span class="constant">pkgdatadir</span>=/usr/share/libtool</span><br><span class="line"><span class="constant">pkgltdldir</span>=/usr/share/libtool</span><br><span class="line"><span class="constant">aclocaldir</span>=/usr/share/aclocal</span><br><span class="line"><span class="constant">auxdir</span>=</span><br><span class="line"><span class="constant">macrodir</span>=</span><br><span class="line"><span class="constant">configure_ac</span>=configure.in</span><br></pre></td></tr></table></figure>
+<p>Está vendo o diretório <code>usr/share</code>? <code>libtoolize</code> busca alguns arquivos nesse diretório, por isso que anterioremente recomendei criar um diretório <code>usr/share</code> para colocar as pastas que baixamos. Será necessário editar esses caminhos conforme o lugar onde você está colocando os arquivos que baixamos anteriormente. No caso da Locaweb, bastou eu colocar o <code>~</code> antes de cada caminho:</p>
+<figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="constant">prefix</span>=~/usr</span><br><span class="line"><span class="constant">datadir</span>=~/usr/share</span><br><span class="line"><span class="constant">pkgdatadir</span>=~/usr/share/libtool</span><br><span class="line"><span class="constant">pkgltdldir</span>=~/usr/share/libtool</span><br><span class="line"><span class="constant">aclocaldir</span>=~/usr/share/aclocal</span><br><span class="line"><span class="constant">auxdir</span>=</span><br><span class="line"><span class="constant">macrodir</span>=</span><br><span class="line"><span class="constant">configure_ac</span>=configure.in</span><br></pre></td></tr></table></figure>
+<p>e agora o <code>libtoolize</code> já está pronto para uso. Basta então executar novamente o comando<br><figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./autogen.<span class="keyword">sh</span></span><br></pre></td></tr></table></figure></p>
+<p>dentro do diretório do sysbench.</p>
+<h1 id="#3_-_Execute_o_comando_-/configure_dentro_do_diretório_clonado">#3 - Execute o comando <code>./configure</code> dentro do diretório clonado</h1><p>Este comando vai aprontar mais a casa para quando nós formos compilar o sysbench.</p>
+<p>Neste passo encontrei um erro que dizia que um tal de <code>AC_PROG_RANLIB</code> não estava definido. Mas ao mesmo tempo o programa já me indicou a solução: digitar <code>AC_PROG_RANLIB</code> no final do arquivo <code>configure.ac</code> que está na pasta do sysbench.</p>
+<p>Por fim executei o comando novamente e estava tudo ok.</p>
+<h1 id="#4_-_Execute_o_comando_make_dentro_do_diretório_clonado">#4 - Execute o comando <code>make</code> dentro do diretório clonado</h1><p>Este comando vai botar tudo junto e no final vamos ter o executável do sysbench pronto para uso.</p>
+<h1 id="#5_-_Execute_o_comando_sysbench_para_verificar_se_o_programa_foi_instalado_corretamente">#5 - Execute o comando <code>sysbench</code> para verificar se o programa foi instalado corretamente</h1><p>Se ao executar o comando você receber um monte de opções no terminal, isso quer dizer que o programa está pronto para uso. Caso contrário, alguma coisa deu errada e nesse caso não faço ideia do que pode ter sido.</p>
 
       </div>
       <footer class="article-footer">
-        <a data-url="http://artenes.github.io/2015/11/26/boas-praticas-desenvolvimento-android/" data-id="cim567c9y0045hkqonwzs2iy2" class="article-share-link"><i class="fa fa-share"></i>Compartilhar</a>
+        <a data-url="http://artenes.github.io/2016/03/23/instalar-sysbench-em-um-servidor-compartilhado-linux/" data-id="cim567c8r002shkqoz3x0neqb" class="article-share-link"><i class="fa fa-share"></i>Compartilhar</a>
         
         
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/benchmark/">benchmark</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/sysbench/">sysbench</a></li></ul>
+
       </footer>
     </div>
   </article>
@@ -145,20 +163,10 @@
     
 <nav id="article-nav">
   
-    <a href="/2015/11/26/materiais-sobre-marketing-digital/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">novos</strong>
-      <p class="article-nav-title">
-        
-          Materiais sobre marketing digital
-        
-      </p>
-      <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
-    </a>
   
-  
-    <a href="/2015/11/04/ferramenta-para-facilitar-leitura-de-codigo-fonte-em-java-no-chrome/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2015/12/27/script-para-pop-under/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">antigos</strong>
-      <p class="article-nav-title">Ferramenta para facilitar leitura de código fonte em Java no Chrome</p>
+      <p class="article-nav-title">Script para Popunder</p>
       <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
     </a>
   
