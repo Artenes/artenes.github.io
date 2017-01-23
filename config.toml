@@ -1,0 +1,252 @@
+baseurl = "http://artenes.github.io/"
+title = "Artenes Nogueira | Desenvolvedor PHP e Laravel"
+languageCode = "pt-br"
+theme = "hugo-orbit-theme"
+
+googleAnalytics = "UA-XXXXXXX-Y"
+
+# Do not build files for websites. Need them? Set to false
+disableRSS = false
+disableSitemap = true
+disable404 = true
+
+[params]
+
+# Meta
+    description = "Artenes Nogueira | Desenvolvedor PHP e Laravel"
+    author = "Artenes Nogueira"
+
+# Theme styles
+
+    # The original template comes with 6 colour schemes. You may choose styles below.
+    # "styles.css", "styles-2.css", "styles-3.css", "styles-4.css", "styles-5.css", "styles-6.css"
+    # are available. Also the source LESS files are included so
+    # it’s quick and easy to change the styling and colour scheme.
+
+    styles = "styles-6.css"
+
+# Sidebar sections
+
+    # Profile section
+    [params.profile]
+        name = "Artenes Nogueira"
+        tagline = "Desenvolvedor PHP e Laravel"
+        avatar = "profile.jpg"
+
+    # Contact section
+    [params.contact]
+        enable = true
+
+        [[params.contact.list]]
+        class = "email"
+        icon = "fa-envelope"
+        url = "mailto: artenes@dimention.com.br"
+        title = "artenes@dimention.com.br"
+
+        [[params.contact.list]]
+        class = "phone"
+        icon = "fa-phone"
+        url = "tel:+5193981035167"
+        title = "+51 (093) 98103-5167"
+
+        [[params.contact.list]]
+        class = "website"
+        icon = "fa-behance"
+        url = "//www.behance.net/artenesnogueira"
+        title = "behance.net/artenes"
+
+        [[params.contact.list]]
+        class = "linkedin"
+        icon = "fa-linkedin"
+        url = "//br.linkedin.com/in/artenes"
+        title = "linkedin.com/artenes"
+
+        [[params.contact.list]]
+        class = "github"
+        icon = "fa-github"
+        url = "//github.com/Artenes"
+        title = "github.com/Artenes"
+
+        [[params.contact.list]]
+        class = "medium"
+        icon = "fa-medium"
+        url = "//medium.com/@Artenessama"
+        title = "medium.com/@Artenes"
+
+        [[params.contact.list]]
+        class = "stack-overflow"
+        icon = "fa-stack-overflow"
+        url = "//stackoverflow.com/users/1585041/artenes-nogueira"
+        title = "stackoverflow.com/artenes"
+
+        [[params.contact.list]]
+        class = "code-wars"
+        icon = "fa-code"
+        url = "//www.codewars.com/users/Artenes"
+        title = "codewars.com/Artenes"
+
+    # Education section
+    [params.education]
+        enable = true
+        title = "Educação"
+
+        [[params.education.list]]
+        degree = "Bacharel em Ciências da Computaçao"
+        college = "Universidade Federal do Oeste do Pará"
+        dates = "2011 - 2016"
+
+        [[params.education.list]]
+        degree = "Ensino Médio"
+        college = "Escola Municipal Presidente Tancredo Neves"
+        dates = "2008 - 2010"
+
+    # Languages section
+    [params.languages]
+        enable = true
+        title = "Linguagens"
+
+        [[params.languages.list]]
+        language = "Portugês"
+        level = "Nativa"
+
+        [[params.languages.list]]
+        language = "Inglês"
+        level = "Intermediário"
+
+    # Interests section
+    [params.interests]
+        enable = true
+        title = "Interesses"
+
+        [[params.interests.list]]
+        interest = "Ficção científica"
+
+        [[params.interests.list]]
+        interest = "Games"
+
+        [[params.interests.list]]
+        interest = "Desenhos animados"
+
+# Main body sections
+
+    # You may use markdown in summary, details and intro fields. But don't overdose, it's resume!:)
+
+    # Summary section
+    [params.summary]
+        enable = true
+        icon = "fa-user"
+        title = "Resumo"
+        summary = "Durante minha primeira graduação em Ciências da computação, trabalhei com o desenvolvimento de um [game para Nintendo Wii](https://github.com/Artenes/hit-the-duck-wii) e um [formulário eletrônico](https://www.behance.net/gallery/33684264/Android-App-Hansys-Electronic-Medical-Records) para coleto de dados de pacientes com Hanseníase. Durante a graduação, formei com alguns colegas uma empresa, chamada [Dimention](http://dimention.com.br/), onde trabalhei no desenvolvimento de um sistema de [gerência de empréstimo consignado](https://www.behance.net/gallery/47605921/Zeus-laravel-app-to-manage-payroll-loan). Ao terminar a gradução já estava trabalhando em uma aplicação web de [conta poupança virtual](https://www.behance.net/gallery/47606675/Alfa-renda-laravel-app-to-manage-savings-investments). Hoje ainda participo da empresa que ajudei a criar e também faço trabalhos como freelancer."
+
+    # Experiences section
+    [params.experiences]
+        enable = true
+        icon = "fa-briefcase"
+        title = "Experiência"
+
+        [[params.jobs.list]]
+        position = "Desenvolvedor PHP"
+        dates = "2014 - Atualmente"
+        company = "Dimention"
+        details = "Além de trabalhar na gerência da empresa, também executo o papel de um desenvolvedor full-stack para criação de aplicações web. Administro o site da empresa e seus perfis em várias redes sociais. Elaboro novas ideias de produtos e serviços a serem criados pela empresa."
+
+        [[params.jobs.list]]
+        position = "Desenvolvedor Android"
+        dates = "2013 - 2016"
+        company = "Laboratório de Suporte à Decisão (UFOPA)"
+        details = "Desenvolvimento de um aplicativo para Android para coleta e gerência de dados em campo de pacientes com Hanseníase. Gerência dos dados coletados em uma única base de dados para geração de relatórios. Coletador de dados em campo, junto com a equipe que faz uso da aplicação. "
+
+        [[params.jobs.list]]
+        position = "Desenvolvedor C++"
+        dates = "2012 - 2013"
+        company = "Projeto Mídias Eletrônicas (UFOPA)"
+        details = "Elaboração e confecção de material didático para ensino de computação para crianças e adolescentes de escolas públicas sem fazer o uso de computador. Lecionar para crianças de escolas públicas o funcionamento do computador sem fazer uso do mesmo. Desenvolvimento de um jogo de tiro ao alvo para Nintendo Wii, usando a linguagem C++, visando criar um material didático para ensinar programação para crianças e jovens."
+
+    # Projects section
+    [params.projects]
+        enable = true
+        icon = "fa-archive"
+        title = "Projetos"
+        intro = "Estes são os projetos que desenvolvi desde o começo da minha carreira como programador."
+
+        [[params.projects.list]]
+        title = "Alfa Renda"
+        url = "https://www.behance.net/gallery/47606675/Alfa-renda-laravel-app-to-manage-savings-investments"
+        tagline = "Aplicação web em PHP com Laravel para criação e gerência de uma conta poupança virtual com rendimento diário."
+
+        [[params.projects.list]]
+        title = "Zeus"
+        url = "https://www.behance.net/gallery/47605921/Zeus-laravel-app-to-manage-payroll-loan"
+        tagline = "Aplicação web em PHP com Laravel para gerenciar empréstimos consignados."
+
+        [[params.projects.list]]
+        title = "Construtor de Projeto de Balões"
+        url = "https://github.com/Artenes/balloonpanelprojectbuilder"
+        tagline = "Aplicação em Javascript para construir projetos de painel de balão."
+
+        [[params.projects.list]]
+        title = "Movie Binder"
+        url = "https://github.com/Artenes/movie-binder-omdbapi"
+        tagline = "Aplicação Android para guardar seus filmes favoritos."
+
+        [[params.projects.list]]
+        title = "Frogi-OS"
+        url = "https://github.com/Artenes/frogi-os"
+        tagline = "Aplicação em Windows para gerenciar pedidos de ordem de serviço."
+
+        [[params.projects.list]]
+        title = "Vendroid"
+        url = "https://github.com/Artenes/vendroid"
+        tagline = "Aplicação Android para gerenciar clientes, estoque, vendas e muito mais."
+
+        [[params.projects.list]]
+        title = "Hansys"
+        url = "https://www.behance.net/gallery/33684264/Android-App-Hansys-Electronic-Medical-Records"
+        tagline = "Formulário eletrônico em Android usado para coletar dados de pacientes com Hanseníase."
+
+        [[params.projects.list]]
+        title = "Hit the Duck"
+        url = "https://github.com/Artenes/hit-the-duck-wii"
+        tagline = "Um jogo de tiro ao alvo feito em C++ para o Nintendo Wii."
+
+    # Skills section
+    [params.skills]
+        enable = true
+        icon = "fa-rocket"
+        title = "Habilidades e conhecimentos"
+
+        [[params.skills.list]]
+        skill = "PHP e Laravel"
+        level = "95%"
+        
+        [[params.skills.list]]
+        skill = "Javascript & jQuery"
+        level = "80%"
+
+        [[params.skills.list]]
+        skill = "HTML5 & CSS"
+        level = "75%"
+
+        [[params.skills.list]]
+        skill = "MySQL & SQLite"
+        level = "80%"
+
+        [[params.skills.list]]
+        skill = "Git"
+        level = "75%"
+
+        [[params.skills.list]]
+        skill = "Gimp"
+        level = "60%"
+
+    # Footer section
+
+    # The original template is released under the Creative Commons Attribution 3.0 License.
+    # Please keep the original attribution link when using for your own project.
+    # If you'd like to use the template without the attribution,
+    # you can check out other license options via template author's website: themes.3rdwavemedia.com
+    # 
+    # As for Hugo port you may rewrite the "Ported for..." line with setting your name below.
+
+    [params.footer]
+        copyright = "Artenes Nogueira"

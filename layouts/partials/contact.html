@@ -1,0 +1,10 @@
+            <div class="contact-container container-block">
+                <ul class="list-unstyled contact-list">
+				{{ range .Site.Params.contact.list }}
+                    <li class="{{ .class }}">
+                    	<p><i class="fa {{ .icon }}"></i></p>
+                    	<a href="{{ .url }}">{{ .title }}</a>
+                    </li>
+				{{ end }}
+                </ul>
+            </div><!--//contact-container-->
