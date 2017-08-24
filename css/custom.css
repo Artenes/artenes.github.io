@@ -1,0 +1,64 @@
+.skill-icon {
+
+	font-size: 5em;
+
+}
+
+.article-icon {
+
+	position: absolute;
+  left: -60px;
+  top: 0;
+  width: 36px;
+  height: 36px;
+  display: inline-block;
+  background: #00BCD4;
+  color: #fff;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  text-align: center;
+  padding-top: 10px;
+  font-size: 16px;
+	
+}
+
+.case .intro {
+
+  background: none;
+
+}
+
+.header.case {
+
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  position: relative;
+
+}
+
+.header.case:before {
+
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0, 0.5);
+
+}
+
+.full {
+
+  width: 100%;
+  height: auto;
+  margin-bottom: 2em;
+
+}
