@@ -59,11 +59,11 @@ disable404 = false
         dates = "2011 - 2016"
 
     # Languages section
-    [params.languages]
+    [params.language]
         enable = true
         title = "Linguagens"
 
-        [[params.languages.list]]
+        [[params.language.list]]
         language = "Inglês"
         level = "Intermediário"
 
