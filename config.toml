@@ -2,6 +2,7 @@ baseurl = "http://artenes.github.io/"
 title = "Artenes Nogueira | Desenvolvedor Android"
 languageCode = "pt-br"
 theme = "hugo-orbit-theme"
+DefaultContentLanguage = "pt"
 
 googleAnalytics = "UA-XXXXXXX-Y"
 
