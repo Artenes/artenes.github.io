@@ -7,6 +7,10 @@ hugo # if using a theme, replace with `hugo -t <YOURTHEME>`
 
 # Go To Public folder
 cd public
+
+# Change to the master branch
+git checkout master
+
 # Add changes to git.
 git add .
 
