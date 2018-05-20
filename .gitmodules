@@ -2,3 +2,7 @@
 	path = public
 	url = git@github.com:Artenes/artenes.github.io.git
 	branch = master
+[submodule "themes/hugo-orbit-theme"]
+	path = themes/hugo-orbit-theme
+	url = git@github.com:aerohub/hugo-orbit-theme.git
+	branch = master

@@ -12,10 +12,11 @@ Then clone the repo:
 git clone git@github.com:Artenes/artenes.github.io.git
 ```
 
-And checkout the `source` branch. This is the branch where all the source files are:
+Checkout the `source` branch and initialize the submodules (repo theme and repo where static files go). This is the branch where all the source files are:
 
 ```
 git checkout source
+git submodule update --init
 ```
 
 To see the site in the browser run:
