@@ -40,7 +40,7 @@ disable404 = false
         [[params.contact.list]]
         class = "email"
         icon = "fa-envelope"
-        url = "mailto: artenesama@gmail.com"
+        url = "mailto:artenesama@gmail.com"
         title = "artenesama@gmail.com"
 
     # Education section
