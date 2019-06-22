@@ -6,3 +6,6 @@
 	path = themes/hugo-orbit-theme
 	url = git@github.com:aerohub/hugo-orbit-theme.git
 	branch = master
+[submodule "themes/hermit"]
+	path = themes/hermit
+	url = https://github.com/Track3/hermit.git
