@@ -1,0 +1,35 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Posts on Artenes&#39; BOK</title>
+		<link>http://artenes.github.io/posts/</link>
+		<description>Recent content in Posts on Artenes&#39; BOK</description>
+		<generator>Hugo -- gohugo.io</generator>
+		<language>en-Us</language>
+		<copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
+		<lastBuildDate>Sat, 22 Jun 2019 13:39:42 -0400</lastBuildDate>
+		<atom:link href="http://artenes.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+		
+		<item>
+			<title>Second Post</title>
+			<link>http://artenes.github.io/posts/second-post/</link>
+			<pubDate>Sat, 22 Jun 2019 13:39:42 -0400</pubDate>
+			
+			<guid>http://artenes.github.io/posts/second-post/</guid>
+			<description>The secont post. Now we are talking!</description>
+			<content type="html"><![CDATA[<p>The secont post. Now we are talking!</p>
+]]></content>
+		</item>
+		
+		<item>
+			<title>First post</title>
+			<link>http://artenes.github.io/posts/first-post/</link>
+			<pubDate>Sat, 22 Jun 2019 12:29:41 +0800</pubDate>
+			
+			<guid>http://artenes.github.io/posts/first-post/</guid>
+			<description>This is the first post. Beware!</description>
+			<content type="html"><![CDATA[<p>This is <strong>the</strong> first post. Beware!</p>
+]]></content>
+		</item>
+		
+	</channel>
+</rss>

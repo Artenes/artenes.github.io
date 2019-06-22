@@ -1,14 +1,47 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Artenes Nogueira | Android Developer</title>
+    <title>Artenes&#39; BOK</title>
     <link>http://artenes.github.io/</link>
-    <description>Recent content on Artenes Nogueira | Android Developer</description>
+    <description>Recent content on Artenes&#39; BOK</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>pt-br</language>
+    <language>en-Us</language>
+    <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
+    <lastBuildDate>Sat, 22 Jun 2019 13:52:33 -0400</lastBuildDate>
     
 	<atom:link href="http://artenes.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>About</title>
+      <link>http://artenes.github.io/about/</link>
+      <pubDate>Sat, 22 Jun 2019 13:52:33 -0400</pubDate>
+      
+      <guid>http://artenes.github.io/about/</guid>
+      <description>My name is Artenes Nogueira and I am a software engineer.
+I work with Android development and also have some experience with web development.
+Currently working at Samsung (SIDIA).
+ 💻 Github ✉️ E-mail  💼 Experience Android Developer &amp;mdash; Samsung (SIDIA) - 2017 - Currently
+ Fix bugs in various Android applications used in Samsung devices sucha as Gallery, Messages, Contacts and Phone. Developed project of Proof of Concept (POC) to test new features to be implemented to new version of Gallery app to Android Pie.</description>
+    </item>
+    
+    <item>
+      <title>Second Post</title>
+      <link>http://artenes.github.io/posts/second-post/</link>
+      <pubDate>Sat, 22 Jun 2019 13:39:42 -0400</pubDate>
+      
+      <guid>http://artenes.github.io/posts/second-post/</guid>
+      <description>The secont post. Now we are talking!</description>
+    </item>
+    
+    <item>
+      <title>First post</title>
+      <link>http://artenes.github.io/posts/first-post/</link>
+      <pubDate>Sat, 22 Jun 2019 12:29:41 +0800</pubDate>
+      
+      <guid>http://artenes.github.io/posts/first-post/</guid>
+      <description>This is the first post. Beware!</description>
+    </item>
     
   </channel>
 </rss>
