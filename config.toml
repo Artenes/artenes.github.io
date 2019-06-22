@@ -1,276 +1,74 @@
 baseurl = "http://artenes.github.io/"
-languageCode = "pt-br"
-theme = "hugo-orbit-theme"
+languageCode = "en-Us"
+theme = "hermit"
 DefaultContentLanguage = "en"
+title = "Artenes' BOK"
+# enableGitInfo = true
+pygmentsCodefences  = true
+pygmentsUseClasses  = true
+# hasCJKLanguage = true  # If Chinese/Japanese/Korean is your main content language, enable this to make wordCount works right.
+rssLimit = 10  # Maximum number of items in the RSS feed.
+copyright = "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License." # This message is only used by the RSS template.
+enableEmoji = true  # Shorthand emojis in content files - https://gohugo.io/functions/emojify/
+# googleAnalytics = "UA-123-45"
+# disqusShortname = "yourdiscussshortname"
 
-googleAnalytics = "UA-XXXXXXX-Y"
+[author]
+  name = "Artenes Nogueira"
 
-# Do not build files for websites. Need them? Set to false
-disableRSS = false
-disableSitemap = true
-disable404 = false
+[blackfriday]
+  # hrefTargetBlank = true
+  # noreferrerLinks = true
+  # nofollowLinks = true
 
-[languages]
-
-	[languages.pt]
-		weight = 1
-		title = "Artenes Nogueira | Desenvolvedor Android"
-		[languages.pt.params]
-			description = "Artenes Nogueira | Desenvolvedor Android"
-			
-			[languages.pt.params.profile]
-        		tagline = "Desenvolvedor Android"
-        		name = "Artenes Nogueira"
-        		avatar = "profile.jpg"
-        	
-			[languages.pt.params.summary]
-			    enable = true
-
-			    icon = "fa-user"
-			    summary = "Engenheiro de software com foco na entrega de qualidade através do uso de padrões de projetos e testes automatizados. Atualmente trabalho com desenvolvimento de aplicações para Android. Tenho experiência principalmente na camada de aplicação, mas possuo familiaridade com a camada de sistema e a forma como o Android funciona internamente. Também já trabalhei com desenvolvimento web com foco em PHP e Javascript."
-
-			[languages.pt.params.experiences]
-		        enable = true
-
-		        icon = "fa-briefcase"
-
-		        [[languages.pt.params.jobs.list]]
-			        position = "Desenvolvedor Android"
-			        dates = "2017 - Atualmente"
-			        company = "Samsung (SIDIA)"
-			        details = "Resolução de problemas nas aplicações comerciais da Samsung, tanto à nivel de aplicação e framework, como à nível de sistema; Desenvolvimento de aplicações para projetos de POC (Prova de Conceito);"
-
-		        [[languages.pt.params.jobs.list]]
-			        position = "Desenvolvedor PHP"
-			        dates = "2014 - 2017"
-			        company = "Dimention"
-			        details = "Desenvolvimento de uma aplicação web em PHP para gerência de empréstimos consignados; Criação e gerência de vários sites comerciais feitos em WordPress."
-
-		        [[languages.pt.params.jobs.list]]
-			        position = "Desenvolvedor Android"
-			        dates = "2013 - 2016"
-			        company = "Laboratório de Suporte à Decisão (UFOPA)"
-			        details = "Desenvolvimento de um aplicativo para Android para coleta e gerência de dados em campo de pacientes com Hanseníase; Gerência dos dados coletados em uma única base de dados para geração de relatórios; Coletador de dados em campo, junto com a equipe que faz uso da aplicação. "
-
-		        [[languages.pt.params.jobs.list]]
-			        position = "Desenvolvedor C++"
-			        dates = "2012 - 2013"
-			        company = "Projeto Mídias Eletrônicas (UFOPA)"
-			        details = "Desenvolvimento de um jogo de tiro ao alvo para Nintendo Wii, usando a linguagem C++, visando criar um material didático para ensinar programação para crianças e jovens."
-
-        	[languages.pt.params.education]
-			    enable = true
-
-			    [[languages.pt.params.education.list]]
-				    degree = "Mestrado em Biociências"
-				    college = "Universidade Federal do Oeste do Pará"
-				    dates = "2018 - Atualmente"
-
-			    [[languages.pt.params.education.list]]
-				    degree = "Bacharel em Ciências da Computação"
-				    college = "Universidade Federal do Oeste do Pará"
-				    dates = "2011 - 2016"
-
-			[languages.pt.params.language]
-		        enable = true
-
-		        [[languages.pt.params.language.list]]
-			        language = "Inglês"
-			        level = "Intermediário"
-
-	[languages.en]
-		weight = 2
-		title = "Artenes Nogueira | Android Developer"
-		[languages.en.params]
-			description = "Artenes Nogueira | Android Developer"
-
-			[languages.en.params.profile]
-        		tagline = "Android Developer"
-        		name = "Artenes Nogueira"
-        		avatar = "profile.jpg"
-
-			[languages.en.params.summary]
-			    enable = true
-			    
-			    icon = "fa-user"
-			    summary = "Software engineer focusing on quality delivery through the use of design standards and automated testing. Currently working with Android application development. I have experience mainly in the application layer, but I have familiarity with the system layer and the way Android works internally. I have also worked with web development focused on PHP and Javascript."
-
-			[languages.en.params.experiences]
-		        enable = true
-		        
-		        icon = "fa-briefcase"
-
-		        [[languages.en.params.jobs.list]]
-			        position = "Android Developer"
-			        dates = "2017 - Currently"
-			        company = "Samsung (SIDIA)"
-			        details = "Troubleshooting Samsung's commercial applications, both at the application and framework level, and at the system level; Development of applications for POC (Proof of Concept) projects."
-
-		        [[languages.en.params.jobs.list]]
-			        position = "PHP Developer"
-			        dates = "2014 - 2017"
-			        company = "Dimention"
-			        details = "Development of a PHP web application for payroll loan management; Creation and management of various commercial websites made in WordPress."
-
-		        [[languages.en.params.jobs.list]]
-			        position = "Android Developer"
-			        dates = "2013 - 2016"
-			        company = "Decision Support Laboratory (UFOPA - University)"
-			        details = "Development of an Android application for data collection and management in the field of leprosy patients; Management of data collected in a single database for reporting; Field data collector, along with the team that makes use of the application."
-
-		        [[languages.en.params.jobs.list]]
-			        position = "C++ Developer"
-			        dates = "2012 - 2013"
-			        company = "Electronic Medias Project (UFOPA - University)"
-			        details = "Development of a shooter game for Nintendo Wii, using the C ++ language, aiming to create a didactic material to teach programming for children and young people."
-
-    		[languages.en.params.education]
-			    enable = true
-
-			    [[languages.en.params.education.list]]
-				    degree = "Master in Biosciences"
-				    college = "Universidade Federal do Oeste do Pará (Brazil)"
-				    dates = "2018 - Currently"
-
-			    [[languages.en.params.education.list]]
-				    degree = "Bachelor in Computer Science"
-				    college = "Universidade Federal do Oeste do Pará (Brazil)"
-				    dates = "2011 - 2016"
-
-			[languages.en.params.language]
-		        enable = true
-
-		        [[languages.en.params.language.list]]
-			        language = "English"
-			        level = "Intermediary"
-
-		        [[languages.en.params.language.list]]
-			        language = "Portuguese"
-			        level = "Fluent"
+[taxonomies]
+  tag = "tags"
+  # Categories are disabled by default.
 
 [params]
+  dateform        = "Jan 2, 2006"
+  dateformShort   = "Jan 2"
+  dateformNum     = "2006-01-02"
+  dateformNumTime = "2006-01-02 15:04 -0700"
 
-# Meta
-    author = "Artenes Nogueira"
+  # Metadata mostly used in document's head
+  # description = ""
+  # images = [""]
+  themeColor = "#494f5c"
 
-# Theme styles
+  homeSubtitle = "Solutions for my daily programmer's problems."
+  footerCopyright = ' &#183; <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
+  # bgImg = ""  # Homepage background-image URL
 
-    # Availables: "styles.css", "styles-2.css", "styles-3.css", "styles-4.css", "styles-5.css", "styles-6.css"
-    styles = "styles-2.css"
+  # Prefix of link to the git commit detail page. GitInfo must be enabled.
+  # gitUrl = "https://github.com/username/repository/commit/"
 
-# Sidebar sections
+  # Toggling this option needs to rebuild SCSS, requires Hugo extended version
+  justifyContent = false  # Set "text-align: justify" to `.content`.
 
-    # Contact section
-    [params.contact]
-        enable = true
+  relatedPosts = true  # Add a related content section to all single posts page
 
-        [[params.contact.list]]
-	        class = "email"
-	        icon = "fa-envelope"
-	        url = "mailto:artenesama@gmail.com"
-	        title = "artenesama@gmail.com"
+  # Add custom css
+  # customCSS = ["css/foo.css", "css/bar.css"]
 
-    # Interests section
-    [params.interests]
-        enable = false
-        title = "Interesses"
+  # Social Icons
+  # Check https://github.com/Track3/hermit#social-icons for more info.
+  [[params.social]]
+    name = "email"
+    url = "mailto:artenes.nogueira@gmail.com"
 
-        [[params.interests.list]]
-        interest = "Ficção científica"
+  [[params.social]]
+    name = "github"
+    url = "https://github.com/Artenes"
 
-        [[params.interests.list]]
-        interest = "Games"
+[menu]
 
-        [[params.interests.list]]
-        interest = "Desenhos animados"
+  [[menu.main]]
+    name = "Posts"
+    url = "posts/"
+    weight = 10
 
-# Main body sections
-
-    # Projects section
-    [params.projects]
-        enable = false
-        icon = "fa-archive"
-        title = "Portfólio"
-        intro = "Estes são os projetos que desenvolvi desde o começo da minha carreira como programador."
-
-        [[params.projects.list]]
-        title = "Alfa Renda"
-        url = "https://www.behance.net/gallery/47606675/Alfa-renda-laravel-app-to-manage-savings-investments"
-        tagline = "Aplicação web em PHP com Laravel para criação e gerência de uma conta poupança virtual com rendimento diário."
-
-        [[params.projects.list]]
-        title = "Zeus"
-        url = "https://www.behance.net/gallery/47605921/Zeus-laravel-app-to-manage-payroll-loan"
-        tagline = "Aplicação web em PHP com Laravel para gerenciar empréstimos consignados."
-
-        [[params.projects.list]]
-        title = "Construtor de Projeto de Balões"
-        url = "https://github.com/Artenes/balloonpanelprojectbuilder"
-        tagline = "Aplicação em Javascript para construir projetos de painel de balão."
-
-        [[params.projects.list]]
-        title = "Movie Binder"
-        url = "https://github.com/Artenes/movie-binder-omdbapi"
-        tagline = "Aplicação Android para guardar seus filmes favoritos."
-
-        [[params.projects.list]]
-        title = "Frogi-OS"
-        url = "https://github.com/Artenes/frogi-os"
-        tagline = "Aplicação em Windows para gerenciar pedidos de ordem de serviço."
-
-        [[params.projects.list]]
-        title = "Vendroid"
-        url = "https://github.com/Artenes/vendroid"
-        tagline = "Aplicação Android para gerenciar clientes, estoque, vendas e muito mais."
-
-        [[params.projects.list]]
-        title = "Hansys"
-        url = "https://www.behance.net/gallery/33684264/Android-App-Hansys-Electronic-Medical-Records"
-        tagline = "Formulário eletrônico em Android usado para coletar dados de pacientes com Hanseníase."
-
-        [[params.projects.list]]
-        title = "Hit the Duck"
-        url = "https://github.com/Artenes/hit-the-duck-wii"
-        tagline = "Um jogo de tiro ao alvo feito em C++ para o Nintendo Wii."
-
-    # Skills section
-    [params.skills]
-        enable = false
-        icon = "fa-rocket"
-        title = "Habilidades e conhecimentos"
-
-        [[params.skills.list]]
-        skill = "Java"
-        level = "75%"
-        
-        [[params.skills.list]]
-        skill = "Android"
-        level = "75%"
-
-        [[params.skills.list]]
-        skill = "Git"
-        level = "75%"
-
-        [[params.skills.list]]
-        skill = "MySQL & SQLite"
-        level = "80%"
-
-        [[params.skills.list]]
-        skill = "Git"
-        level = "75%"
-
-        [[params.skills.list]]
-        skill = "Gimp"
-        level = "60%"
-
-    # Footer section
-
-    # The original template is released under the Creative Commons Attribution 3.0 License.
-    # Please keep the original attribution link when using for your own project.
-    # If you'd like to use the template without the attribution,
-    # you can check out other license options via template author's website: themes.3rdwavemedia.com
-    # 
-    # As for Hugo port you may rewrite the "Ported for..." line with setting your name below.
-
-    [params.footer]
-        copyright = "Artenes Nogueira"
+  [[menu.main]]
+    name = "About"
+    url = "about/"
+    weight = 20
