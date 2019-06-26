@@ -31,7 +31,6 @@ public class SandwichTest {
 }
 ````
 
----
 We want to test the following class. It represents the device and exposes two methods: ``ìsInAirplaneMode`` and ``ìsWithLowBattery``. Both of them make use of the Android framework to check if the device is with Airplane mode enabled or if it has enough battery.
 
 ````kotlin
@@ -55,8 +54,6 @@ public class Device(private val context: Context) {
     
 }
 ````
-
----
 
 ## To test ``isInAirplaneMode`` method
 We would have two tests to validate the two possible outcomes, both implemented in the code bloack below. Pay attention to the ``ShadowSettings`` class. It is a class provided by Robolectric and it belogs to this collection of classes called "Sadow" classes. Instances of these classes are created along the real Android system classes to allow you to manipulate their behaviour. Such as in this test case where we call ``ShadowSettings.setAirplaneMode`` to set if either true or false would be returned from the ``Settings.System.getInt`` call in our ``Device`` class to check if Airplane is enabled or not.
@@ -99,8 +96,6 @@ fun isInAirplaneMode_returnsFalseIfAirplaneIsDisabled() {
   assertFalse(isAirplaneOn)  
 }
 ````
-
----
 
 ## To test ``isWithLowBattery`` method
 Same thing here, two tests will be necessary. The difference is in the ``setUp`` method. Since we we are dealing with a non-static method, we have to get the reference to the shadow object that we need to manipulate. Inside of ``Device`` class we get the instance of ``BatteryManager`` by calling ``context.getSystemService(Context.BATTERY_SERVICE) as BatteryManager``. We will do the same, but we will pass the reference to the Robolectric method called ``Shadows.shadowOf``. As said before, each object has a corresponding shadow, so to get it we need the object reference and a call to ``Shadows.shadowOf``. It works like a key-value map, where the reference is the key.
@@ -150,5 +145,6 @@ fun isWithLowBattery_returnsFalseIfDeviceIsWithBatteryAndIsCharging() {
   assertFalse(isLowBattery)  
 }
 ````
----
+
+## Conclusion
 This is the basic gist of Robolectric. Instead of using ``mocks``, we use ``fakes`` to test out code that depends on Android. Robolectric provides a ton of shadows for various Android classes. But if there is a class that do not has a shadow, [you can easily implement a shadow for it](https://himbeer.farm/2018/11/custom-shadows/).
