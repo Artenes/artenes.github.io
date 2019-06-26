@@ -3,6 +3,12 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://artenes.github.io/tags/aws/</loc>
+    <lastmod>2019-06-25T19:12:55-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://artenes.github.io/</loc>
     <lastmod>2019-06-25T19:12:55-04:00</lastmod>
     <priority>0</priority>
@@ -20,8 +26,14 @@
   </url>
   
   <url>
+    <loc>http://artenes.github.io/tags/s3/</loc>
+    <lastmod>2019-06-25T19:12:55-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://artenes.github.io/tags/</loc>
-    <lastmod>2019-06-24T21:01:34-04:00</lastmod>
+    <lastmod>2019-06-25T19:12:55-04:00</lastmod>
     <priority>0</priority>
   </url>
   
