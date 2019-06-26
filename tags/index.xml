@@ -30,32 +30,5 @@
       <description></description>
     </item>
     
-    <item>
-      <title>development</title>
-      <link>http://artenes.github.io/tags/development/</link>
-      <pubDate>Sat, 22 Jun 2019 13:39:42 -0400</pubDate>
-      
-      <guid>http://artenes.github.io/tags/development/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>demo</title>
-      <link>http://artenes.github.io/tags/demo/</link>
-      <pubDate>Sat, 22 Jun 2019 12:29:41 +0800</pubDate>
-      
-      <guid>http://artenes.github.io/tags/demo/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>image</title>
-      <link>http://artenes.github.io/tags/image/</link>
-      <pubDate>Sat, 22 Jun 2019 12:29:41 +0800</pubDate>
-      
-      <guid>http://artenes.github.io/tags/image/</guid>
-      <description></description>
-    </item>
-    
   </channel>
 </rss>
