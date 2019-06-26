@@ -2,6 +2,9 @@
 title: "Configuring Amazon Aws S3 to Store Images for Your Website"
 date: 2019-06-25T19:12:55-04:00
 draft: false
+tags: 
+  - AWS
+  - S3
 ---
 
 ## Before starting
