@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-Us</language>
     <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
-    <lastBuildDate>Tue, 25 Jun 2019 19:12:55 -0400</lastBuildDate>
+    <lastBuildDate>Wed, 26 Jun 2019 21:18:08 -0400</lastBuildDate>
     
 	<atom:link href="http://artenesbok.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Why Not Use Heroku for Your Ghost Blog</title>
+      <link>http://artenesbok.com/posts/why-not-use-heroku-for-your-ghost-blog/</link>
+      <pubDate>Wed, 26 Jun 2019 21:18:08 -0400</pubDate>
+      
+      <guid>http://artenesbok.com/posts/why-not-use-heroku-for-your-ghost-blog/</guid>
+      <description>I tried to set up a personal blog for free using Heroku and Ghost. After some time trying to setup this, I&amp;rsquo;ve come to the conclusion that this really does not works as planned. The main problem is how Heroku works for our basic use case of a blog.
+How Heroku works For our needs to host a blog, Heroku is just a service where you can host your website files.</description>
+    </item>
     
     <item>
       <title>Configuring Amazon Aws S3 to Store Images for Your Website</title>

@@ -6,8 +6,75 @@
 		<generator>Hugo -- gohugo.io</generator>
 		<language>en-Us</language>
 		<copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
-		<lastBuildDate>Tue, 25 Jun 2019 19:12:55 -0400</lastBuildDate>
+		<lastBuildDate>Wed, 26 Jun 2019 21:18:08 -0400</lastBuildDate>
 		<atom:link href="http://artenesbok.com/posts/index.xml" rel="self" type="application/rss+xml" />
+		
+		<item>
+			<title>Why Not Use Heroku for Your Ghost Blog</title>
+			<link>http://artenesbok.com/posts/why-not-use-heroku-for-your-ghost-blog/</link>
+			<pubDate>Wed, 26 Jun 2019 21:18:08 -0400</pubDate>
+			
+			<guid>http://artenesbok.com/posts/why-not-use-heroku-for-your-ghost-blog/</guid>
+			<description>I tried to set up a personal blog for free using Heroku and Ghost. After some time trying to setup this, I&amp;rsquo;ve come to the conclusion that this really does not works as planned. The main problem is how Heroku works for our basic use case of a blog.
+How Heroku works For our needs to host a blog, Heroku is just a service where you can host your website files.</description>
+			<content type="html"><![CDATA[
+
+<p>I tried to set up a personal blog for free using <a href="https://heroku.com">Heroku</a> and <a href="https://ghost.org">Ghost</a>. After some time trying to setup this, I&rsquo;ve come to the conclusion that this really does not works as planned. The main problem is how Heroku works for our basic use case of a blog.</p>
+
+<h2 id="how-heroku-works">How Heroku works</h2>
+
+<p>For our needs to host a blog, Heroku is just a service where you can host your website files. It follows these steps to serve your website:</p>
+
+<ul>
+<li>Right off the bat, your files will not be available to access.</li>
+<li>When someone access your website&rsquo;s url, Heroku will create a Dyno instance for your website.</li>
+<li>A Dyno instance means that your website will be built somewhere to become available to access.</li>
+<li>The build process can take a long time if your website is a more complex web app such as the case of Ghost that is a Node.js app.</li>
+<li>So when the first user hits the app, he will have to wait about 10 seconds to get any response. The following ones will not have to wait.</li>
+<li>After some time not being used, the Dyno will be destroyed.</li>
+<li>When this happens, any file uploaded to that Dyno will be destroyed and when someone tries to access it again, it will have to rebuild your site once again.</li>
+<li>Databases do not follow this rule. Anything that was saved in these will be kept.</li>
+</ul>
+
+<p>None of these points are a problem. This is just how the service works. And this is a good thing since they charge for the time that your Dyno stays alive. They offer a free tier plan where you can have up to 1000 hours per month of time consumed by a Dyno.</p>
+
+<h2 id="how-to-surpass-heroku-s-ways">How to surpass Heroku&rsquo;s ways</h2>
+
+<p>Since Heroku destroys everything when it does not need it anymore, how to keep images that I&rsquo;ve uploaded to my blog? Just save them somewhere else. Our bloging plataform in question (Ghost), provides some 3rd party libraries that allow us to save an image through its UI to somewhere else. Unfortunately, the most common ones does not work properly.</p>
+
+<p>Ghost call these libraries <a href="https://docs.ghost.org/concepts/storage-adapters/">storage adapters</a>. The following ones rouse my interest:</p>
+
+<ul>
+<li><a href="https://github.com/spanishdict/ghost-s3-compat">S3</a></li>
+<li><a href="https://github.com/robincsamuel/ghost-google-drive">Google Drive</a></li>
+<li><a href="https://github.com/wrenth04/ghost-imgur">Imgur</a></li>
+<li><a href="https://github.com/ifvictr/ghost-github">Github</a></li>
+<li><a href="https://github.com/zce/pages-store">Github Pages or Gitlabe Pages</a></li>
+</ul>
+
+<p>These are services that I was used to use, but most of these libraries do not work as expected or the services in question do not provide what we need.</p>
+
+<p>For Google Drive and Github cases, the libraries just did not work. For the Github library, the author said that <a href="https://github.com/ifvictr/ghost-github/issues/11">it has some bugs that needs fixing for the latest version of Ghost</a>. The Google Drive one was just throwing an exception whenever I tried to upload an image. The Imgur one was kinda half-baked, it just uploaded the images as an anonymous, so in the end you would not have a nice collection with all your images somewhere to check.</p>
+
+<p>The ones that worked where the S3 and Github Pages or Gitlab Pages. The S3 one worked flawless. The only downside is that S3 is a paid service. You can uses its storage service for 12 months, but after that you pay or lose access. Since I wanted a free solution, this was not an option. The other one also worked very well, but then came Github and Gitlab to bite me back. Github pages where giving me random 404s for the images I uploaded. Sometimes I could access an image, others don&rsquo;t. And for Gitlab the images just took some time to become available, something around 5 minutes. In this case Gitlab was a good solution, but since S3 show me that it would be nice to use a service where I could upload and have the image available instantly I decided to keep looking further for something else.</p>
+
+<p>But I didn&rsquo;t. There is actually a last option that seems pretty similar to S3 and it is free: <a href="https://cloud.google.com/storage/">Google Cloud Storage</a>. There is also a <a href="https://github.com/thombuchi/ghost-google-cloud-storage">storage adapter for it</a>. In this case Gitlab would be the solution if the Google Cloud Storage does not work very well with this.</p>
+
+<p>In the end this solves only part of the problem. Images are ok, but themes files are not. Ghost does not uses these storage adapters to save themes files. So when you upload a nice theme you found somewhere, Heroku will just wipe out later to turn your webiste in just a mess of text without style. This problem makes Heroku not a good option for a dynamic blog that needs a backend such as Ghost or even Wordpress. Only if these CMS provided a way to save all the files to an external storage.</p>
+
+<h2 id="why-heroku-in-the-first-place">Why Heroku in the first place?</h2>
+
+<p>Because of the <a href="https://github.com/cobyism/ghost-on-heroku">one click deploy button</a>. You just click and you have your website. This link evens shows how to setup S3 to use along with it. But unfortunately this does not covers everything. Alos I knew about Heroku for some time, so I just thought that was worth the shot.</p>
+
+<h2 id="why-ghost">Why Ghost?</h2>
+
+<p>In relation with Wordpress, that it is a very popular CMS, Ghost is more simple, elegant and have a nice post editor, perfect for someone that just want to access your blog from anywhere and start typing something.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>Dropped the idea and went for a static blog with <a href="https://gohugo.io/">Hugo</a>. Now I have to write the posts in a text editor using markdown instead of a WYSIWYG editor, but that works just fine. Now I do not have problems with images or other things, just commit the contents to my github repository and waits some minutes to go live. So, do not try to put a CMS or any simple web app that needs a backed in a service like Heroku. It was not made for this kinda of thing. Not for a free tier at least.</p>
+]]></content>
+		</item>
 		
 		<item>
 			<title>Configuring Amazon Aws S3 to Store Images for Your Website</title>

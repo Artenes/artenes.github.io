@@ -3,13 +3,42 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://artenesbok.com/tags/aws/</loc>
-    <lastmod>2019-06-25T19:12:55-04:00</lastmod>
+    <loc>http://artenesbok.com/</loc>
+    <lastmod>2019-06-26T21:18:08-04:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://artenesbok.com/</loc>
+    <loc>http://artenesbok.com/posts/</loc>
+    <lastmod>2019-06-26T21:18:08-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://artenesbok.com/tags/</loc>
+    <lastmod>2019-06-26T21:18:08-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://artenesbok.com/posts/why-not-use-heroku-for-your-ghost-blog/</loc>
+    <lastmod>2019-06-26T21:18:08-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://artenesbok.com/tags/ghost/</loc>
+    <lastmod>2019-06-26T21:18:08-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://artenesbok.com/tags/heroku/</loc>
+    <lastmod>2019-06-26T21:18:08-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://artenesbok.com/tags/aws/</loc>
     <lastmod>2019-06-25T19:12:55-04:00</lastmod>
     <priority>0</priority>
   </url>
@@ -20,19 +49,7 @@
   </url>
   
   <url>
-    <loc>http://artenesbok.com/posts/</loc>
-    <lastmod>2019-06-25T19:12:55-04:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>http://artenesbok.com/tags/s3/</loc>
-    <lastmod>2019-06-25T19:12:55-04:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://artenesbok.com/tags/</loc>
     <lastmod>2019-06-25T19:12:55-04:00</lastmod>
     <priority>0</priority>
   </url>
