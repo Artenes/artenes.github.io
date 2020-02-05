@@ -1,7 +1,7 @@
 ---
-title: "Using_databinding_on_android"
+title: "Using Data Binding on android"
 date: 2020-02-05T18:46:07-04:00
-draft: true
+draft: false
 toc: false
 images:
 tags: 
@@ -11,7 +11,7 @@ tags:
 
 Let's use [data binding](https://developer.android.com/topic/libraries/data-binding?hl=pt-br) in an Android application.
 
-1. Enabling data binding in your build.gradle file.
+1.Enabling data binding in your build.gradle file.
 
 ````groovy
 android {
@@ -21,7 +21,7 @@ android {
 }
 ````
 
-2. Using data binding in your xml layout file.
+2.Using data binding in your xml layout file.
 
 - Wrap it with the ``<layout>`` tag.
 - Use the ``<data>`` tag to decalre the variables used in this layout.
@@ -43,7 +43,7 @@ android {
 </layout>
 ````
 
-3. Inflating the layout in your Activity.
+3.Inflating the layout in your Activity.
 
 ````kotlin
 import androidx.appcompat.app.AppCompatActivity
@@ -63,7 +63,7 @@ class AccountViewActivity : AppCompatActivity() {
 }
 ````
 
-4. Exposing data from your ViewModel to the View.
+4.Exposing data from your ViewModel to the View.
 
 You have to make your data ``MutableLiveDatas`` so the data binding library can write and read data from/to it.
 
@@ -76,7 +76,7 @@ class MyViewModel() : ViewModel() {
 }
 ````
 
-5. Binding data from your ViewModel to the View.
+5.Binding data from your ViewModel to the View.
 
 Pay attention to use ``@={}`` to bind the data in the view.
 
@@ -88,7 +88,7 @@ Pay attention to use ``@={}`` to bind the data in the view.
     android:text="@={viewModel.data}" />
 ````
 
-6. Binding data to a custom view.
+6.Binding data to a custom view.
 
 Data binding does not know how to bind data to custom views, so you have to tell it through ``BidingAdapters``.
 
@@ -125,7 +125,7 @@ object Bindings {
     @JvmStatic
     fun setListener(view: CustomView, attrChange: InverseBindingListener) {
         //you create this listener
-        view.listener = object : MyCustomView.OnValueChangeListener {
+        view.listener = object:MyCustomView.OnValueChangeListener {
             override fun onValueChanged(newValue: String) {
                 attrChange.onChange()
             }
@@ -135,7 +135,7 @@ object Bindings {
 }
 ````
 
-7. Adding onClick event in buttons with data binding
+7.Adding onClick event in buttons with data binding
 
 ````xml
 <Button
