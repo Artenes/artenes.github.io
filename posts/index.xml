@@ -6,8 +6,131 @@
 		<generator>Hugo -- gohugo.io</generator>
 		<language>en-Us</language>
 		<copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
-		<lastBuildDate>Wed, 26 Jun 2019 21:18:08 -0400</lastBuildDate>
+		<lastBuildDate>Wed, 05 Feb 2020 18:46:07 -0400</lastBuildDate>
 		<atom:link href="http://artenesbok.com/posts/index.xml" rel="self" type="application/rss+xml" />
+		
+		<item>
+			<title>Using Data Binding on android</title>
+			<link>http://artenesbok.com/posts/using_databinding_on_android/</link>
+			<pubDate>Wed, 05 Feb 2020 18:46:07 -0400</pubDate>
+			
+			<guid>http://artenesbok.com/posts/using_databinding_on_android/</guid>
+			<description>Let&amp;rsquo;s use data binding in an Android application.
+1.Enabling data binding in your build.gradle file.
+android { dataBinding { enabled = true } } 2.Using data binding in your xml layout file.
+ Wrap it with the &amp;lt;layout&amp;gt; tag. Use the &amp;lt;data&amp;gt; tag to decalre the variables used in this layout.  &amp;lt;?xml version=&amp;#34;1.0&amp;#34; encoding=&amp;#34;utf-8&amp;#34;?&amp;gt; &amp;lt;layout xmlns:android=&amp;#34;http://schemas.android.com/apk/res/android&amp;#34; xmlns:app=&amp;#34;http://schemas.android.com/apk/res-auto&amp;#34;&amp;gt; &amp;lt;data&amp;gt; &amp;lt;!-- We are using ViewMode here as an example, but it can be any data type --&amp;gt; &amp;lt;variable name=&amp;#34;viewModel&amp;#34; type=&amp;#34;package.</description>
+			<content type="html"><![CDATA[<p>Let&rsquo;s use <a href="https://developer.android.com/topic/libraries/data-binding?hl=pt-br">data binding</a> in an Android application.</p>
+
+<p>1.Enabling data binding in your build.gradle file.</p>
+<div class="highlight"><pre class="chroma"><code class="language-groovy" data-lang="groovy"><span class="n">android</span> <span class="o">{</span>
+  <span class="n">dataBinding</span> <span class="o">{</span>
+    <span class="n">enabled</span> <span class="o">=</span> <span class="kc">true</span>
+  <span class="o">}</span>
+<span class="o">}</span></code></pre></div>
+<p>2.Using data binding in your xml layout file.</p>
+
+<ul>
+<li>Wrap it with the <code>&lt;layout&gt;</code> tag.</li>
+<li>Use the <code>&lt;data&gt;</code> tag to decalre the variables used in this layout.</li>
+</ul>
+<div class="highlight"><pre class="chroma"><code class="language-xml" data-lang="xml"><span class="cp">&lt;?xml version=&#34;1.0&#34; encoding=&#34;utf-8&#34;?&gt;</span>
+<span class="nt">&lt;layout</span> <span class="na">xmlns:android=</span><span class="s">&#34;http://schemas.android.com/apk/res/android&#34;</span>
+    <span class="na">xmlns:app=</span><span class="s">&#34;http://schemas.android.com/apk/res-auto&#34;</span><span class="nt">&gt;</span>
+
+    <span class="nt">&lt;data&gt;</span>
+        <span class="c">&lt;!-- We are using ViewMode here as an example, but it can be any data type --&gt;</span>
+        <span class="nt">&lt;variable</span>
+            <span class="na">name=</span><span class="s">&#34;viewModel&#34;</span>
+            <span class="na">type=</span><span class="s">&#34;package.MyViewModel&#34;</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;/data&gt;</span>
+
+    <span class="c">&lt;!-- Your layout here --&gt;</span>
+
+<span class="nt">&lt;/layout&gt;</span></code></pre></div>
+<p>3.Inflating the layout in your Activity.</p>
+<div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="k">import</span> <span class="nn">androidx.appcompat.app.AppCompatActivity</span>
+
+<span class="k">class</span> <span class="nc">AccountViewActivity</span> <span class="p">:</span> <span class="n">AppCompatActivity</span><span class="p">()</span> <span class="p">{</span> 
+
+  <span class="k">override</span> <span class="k">fun</span> <span class="nf">onCreate</span><span class="p">(</span><span class="n">savedInstanceState</span><span class="p">:</span> <span class="n">Bundle</span><span class="p">?)</span> <span class="p">{</span>
+    <span class="k">super</span><span class="p">.</span><span class="n">onCreate</span><span class="p">(</span><span class="n">savedInstanceState</span><span class="p">)</span>
+
+    <span class="k">val</span> <span class="py">viewModel</span> <span class="p">=</span> <span class="n">ViewModelProviders</span><span class="p">.</span><span class="n">of</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="n">factory</span><span class="p">).</span><span class="k">get</span><span class="p">(</span><span class="n">MyViewModel</span><span class="o">::</span><span class="k">class</span><span class="p">.</span><span class="n">java</span><span class="p">)</span>
+
+    <span class="k">val</span> <span class="py">binding</span> <span class="p">=</span> <span class="n">DataBindingUtil</span><span class="p">.</span><span class="n">setContentView</span><span class="p">&lt;</span><span class="n">ActivityAccountViewBinding</span><span class="p">&gt;(</span><span class="k">this</span><span class="p">,</span><span class="n">R</span><span class="p">.</span><span class="n">layout</span><span class="p">.</span><span class="n">my_view</span><span class="p">)</span>
+    <span class="n">binding</span><span class="p">.</span><span class="n">lifecycleOwner</span> <span class="p">=</span> <span class="k">this</span> <span class="c1">//this is to use LiveData
+</span><span class="c1"></span>    <span class="n">binding</span><span class="p">.</span><span class="n">viewModel</span> <span class="p">=</span> <span class="n">viewModel</span>
+  <span class="p">}</span>
+
+<span class="p">}</span></code></pre></div>
+<p>4.Exposing data from your ViewModel to the View.</p>
+
+<p>You have to make your data <code>MutableLiveDatas</code> so the data binding library can write and read data from/to it.</p>
+<div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="k">class</span> <span class="nc">MyViewModel</span><span class="p">()</span> <span class="p">:</span> <span class="n">ViewModel</span><span class="p">()</span> <span class="p">{</span>
+
+  <span class="c1">//it can be of any type
+</span><span class="c1"></span>  <span class="k">val</span> <span class="py">myData</span> <span class="p">=</span> <span class="n">MutableLiveData</span><span class="p">&lt;</span><span class="n">String</span><span class="p">&gt;()</span>
+
+<span class="p">}</span></code></pre></div>
+<p>5.Binding data from your ViewModel to the View.</p>
+
+<p>Pay attention to use <code>@={}</code> to bind the data in the view.</p>
+<div class="highlight"><pre class="chroma"><code class="language-xml" data-lang="xml"><span class="nt">&lt;com.google.android.material.textfield.TextInputEditText</span>
+    <span class="na">android:id=</span><span class="s">&#34;@+id/textInputName&#34;</span>
+    <span class="na">android:layout_width=</span><span class="s">&#34;match_parent&#34;</span>
+    <span class="na">android:layout_height=</span><span class="s">&#34;wrap_content&#34;</span>
+    <span class="na">android:text=</span><span class="s">&#34;@={viewModel.data}&#34;</span> <span class="nt">/&gt;</span></code></pre></div>
+<p>6.Binding data to a custom view.</p>
+
+<p>Data binding does not know how to bind data to custom views, so you have to tell it through <code>BidingAdapters</code>.</p>
+<div class="highlight"><pre class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="k">import</span> <span class="nn">androidx.databinding.BindingAdapter</span>
+<span class="k">import</span> <span class="nn">androidx.databinding.InverseBindingAdapter</span>
+<span class="k">import</span> <span class="nn">androidx.databinding.InverseBindingListener</span>
+
+<span class="k">object</span> <span class="nc">Bindings</span> <span class="p">{</span>
+
+    <span class="c1">//this method tells how to set the value in the custom view
+</span><span class="c1"></span>    <span class="c1">//this myCustomProperty can be any name
+</span><span class="c1"></span>    <span class="c1">//the method also can be any name
+</span><span class="c1"></span>    <span class="c1">//data binding will find any method with this annotation
+</span><span class="c1"></span>    <span class="n">@BindingAdapter</span><span class="p">(</span><span class="s">&#34;myCustomProperty&#34;</span><span class="p">)</span>
+    <span class="n">@JvmStatic</span>
+    <span class="k">fun</span> <span class="nf">setValue</span><span class="p">(</span><span class="n">view</span><span class="p">:</span> <span class="n">MyCustomView</span><span class="p">,</span> <span class="n">newValue</span><span class="p">:</span> <span class="n">String</span><span class="p">?)</span> <span class="p">{</span>
+        <span class="c1">//this is to avoid infinite loops
+</span><span class="c1"></span>        <span class="k">if</span> <span class="p">(</span><span class="n">view</span><span class="p">.</span><span class="n">value</span> <span class="p">!=</span> <span class="n">newValue</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">view</span><span class="p">.</span><span class="n">value</span> <span class="p">=</span> <span class="n">newValue</span> <span class="o">?:</span> <span class="s">&#34;&#34;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="c1">//this method tells how to fetch data from the custom view
+</span><span class="c1"></span>    <span class="n">@InverseBindingAdapter</span><span class="p">(</span><span class="n">attribute</span> <span class="p">=</span> <span class="s">&#34;myCustomProperty&#34;</span><span class="p">)</span>
+    <span class="n">@JvmStatic</span>
+    <span class="k">fun</span> <span class="nf">getValue</span><span class="p">(</span><span class="n">view</span><span class="p">:</span> <span class="n">MyCystomView</span><span class="p">):</span> <span class="n">String</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">view</span><span class="p">.</span><span class="n">value</span>
+    <span class="p">}</span>
+
+    <span class="c1">//this is a standard, you need to take the name and add the sufix PropertyAttrChanged
+</span><span class="c1"></span>    <span class="c1">//this is how we tell when the data changes in behalve of the user
+</span><span class="c1"></span>    <span class="n">@BindingAdapter</span><span class="p">(</span><span class="s">&#34;app:myCustomPropertyAttrChanged&#34;</span><span class="p">)</span>
+    <span class="n">@JvmStatic</span>
+    <span class="k">fun</span> <span class="nf">setListener</span><span class="p">(</span><span class="n">view</span><span class="p">:</span> <span class="n">CustomView</span><span class="p">,</span> <span class="n">attrChange</span><span class="p">:</span> <span class="n">InverseBindingListener</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">//you create this listener
+</span><span class="c1"></span>        <span class="n">view</span><span class="p">.</span><span class="n">listener</span> <span class="p">=</span> <span class="k">object</span><span class="p">:</span><span class="n">MyCustomView</span><span class="p">.</span><span class="n">OnValueChangeListener</span> <span class="p">{</span>
+            <span class="k">override</span> <span class="k">fun</span> <span class="nf">onValueChanged</span><span class="p">(</span><span class="n">newValue</span><span class="p">:</span> <span class="n">String</span><span class="p">)</span> <span class="p">{</span>
+                <span class="n">attrChange</span><span class="p">.</span><span class="n">onChange</span><span class="p">()</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+<span class="p">}</span></code></pre></div>
+<p>7.Adding onClick event in buttons with data binding</p>
+<div class="highlight"><pre class="chroma"><code class="language-xml" data-lang="xml"><span class="nt">&lt;Button</span>
+  <span class="na">android:id=</span><span class="s">&#34;@+id/buttonSave&#34;</span>
+  <span class="na">android:layout_width=</span><span class="s">&#34;match_parent&#34;</span>
+  <span class="na">android:layout_height=</span><span class="s">&#34;wrap_content&#34;</span>
+  <span class="na">android:text=</span><span class="s">&#34;@string/save&#34;</span>
+  <span class="na">android:onClick=</span><span class="s">&#34;@{() -&gt; viewModel.save()}&#34;</span><span class="nt">/&gt;</span></code></pre></div>]]></content>
+		</item>
 		
 		<item>
 			<title>Why Not Use Heroku for Your Ghost Blog</title>

@@ -4,19 +4,36 @@
   
   <url>
     <loc>http://artenesbok.com/</loc>
-    <lastmod>2019-06-26T21:18:08-04:00</lastmod>
+    <lastmod>2020-02-05T18:46:07-04:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://artenesbok.com/posts/</loc>
-    <lastmod>2019-06-26T21:18:08-04:00</lastmod>
+    <lastmod>2020-02-05T18:46:07-04:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://artenesbok.com/tags/</loc>
-    <lastmod>2019-06-26T21:18:08-04:00</lastmod>
+    <lastmod>2020-02-05T18:46:07-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://artenesbok.com/posts/using_databinding_on_android/</loc>
+    <lastmod>2020-02-05T18:46:07-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://artenesbok.com/tags/android/</loc>
+    <lastmod>2020-02-05T18:46:07-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://artenesbok.com/tags/databinding/</loc>
+    <lastmod>2020-02-05T18:46:07-04:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -57,12 +74,6 @@
   <url>
     <loc>http://artenesbok.com/posts/using-robolectric-for-unit-tests-in-android/</loc>
     <lastmod>2019-06-24T21:01:34-04:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://artenesbok.com/tags/android/</loc>
-    <lastmod>2019-06-24T21:01:34-04:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
